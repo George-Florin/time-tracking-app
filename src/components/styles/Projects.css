@@ -1,0 +1,17 @@
+.project-component {
+  position: relative;
+  min-height: 100px;
+  border: 2px solid black;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.list-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.no-projects-msg {
+  font-weight: bold;
+  text-align: center;
+}

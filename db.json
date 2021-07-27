@@ -1,0 +1,17 @@
+{
+  "projects": [
+    {
+      "title": "test ",
+      "description": "description",
+      "id": 1
+    }
+  ],
+  "times": [
+    {
+      "activity": "Test activity",
+      "date": "2021-07-25",
+      "time": "2",
+      "id": 1
+    }
+  ]
+}
