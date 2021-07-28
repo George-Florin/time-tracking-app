@@ -1,15 +1,15 @@
 {
   "projects": [
     {
-      "title": "test ",
-      "description": "description",
+      "title": "Test Project",
+      "description": "Test description",
       "id": 1
     }
   ],
   "times": [
     {
       "activity": "Test activity",
-      "date": "2021-07-25",
+      "date": "2021-07-27",
       "time": "2",
       "id": 1
     }

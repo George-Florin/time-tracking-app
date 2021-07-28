@@ -16,21 +16,25 @@ const Project = ({ project, onDelete}) => {
     return (
         <div>
             <div className="project-component">
-                    <EdiText type="text" 
+                    <EdiText 
+                    type="text" 
                     className="project-title" 
                     value={project.title} 
                     onSave={handleSave} 
                     showButtonsOnHover
                     submitOnUnfocus
-                    cancelOnUnfocus></EdiText>
+                    cancelOnUnfocus
+                    />
                     <br/>
-                    <EdiText type="textarea" 
+                    <EdiText 
+                    type="textarea" 
                     className="project-description" 
                     value={project.description} 
                     onSave={handleSave} 
                     showButtonsOnHover
                     submitOnUnfocus
-                    cancelOnUnfocus></EdiText>
+                    cancelOnUnfocus
+                    />
                     <Link to={`/projectpage/${project.id}`} className="view-icon"><FaEye/></Link>
                     <FaTrash className="delete-icon" onClick={() => onDelete(project.id)}/>
             </div>

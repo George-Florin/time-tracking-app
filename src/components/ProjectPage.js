@@ -3,12 +3,18 @@ import React from 'react';
 import './styles/ProjectPage.css';
 import TimeForm from './TimeForm';
 import Times from './Times';
+import MyContext from '../Context/Context';
 import TimeContext from '../Context/TimeContext';
 import Title from './Title';
 
-const ProjectPage = ({ project, match}) => {
+const ProjectPage = ({ match}) => {
     const {params: {id}} = match
     const {times, setTimes} = useContext(TimeContext)
+
+    const { projects } = useContext(MyContext)
+
+    const project = projects.find(project => project.id === parseInt(id))
+
 
     useEffect(() => {
         const getTimes = async () => {
@@ -57,7 +63,7 @@ const deleteTime = async (id) => {
 
     return (
         <div className="single-project">
-            <Title />
+            <Title title={project.title} description={project.description}/>
             <TimeForm onAdd={addTime}/>
             <Times times={times} onDelete={deleteTime}/>
         </div>

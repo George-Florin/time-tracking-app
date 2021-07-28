@@ -2,14 +2,16 @@ import React from 'react'
 import './styles/TimeTotal.css'
 import TimeContext from "../Context/TimeContext";
 import { useContext } from "react";
-import Time from './Time';
-import TimeAmount from './TimeAmount';
 
-const TimeTotal = ({ time, amount }) => {
+const TimeTotal = ({ time }) => {
 
     const context = useContext(TimeContext)
+    const timesSum = context.times.reduce((acc, {time}) => {
+        return acc + time
+      }, 0);
     console.log(context)
-    return <div className="time-total">Total: {context.times.length}</div>
+
+    return <div className="time-total">Total: {timesSum} </div>
 
 }
 
