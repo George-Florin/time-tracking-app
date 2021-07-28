@@ -6,12 +6,8 @@ import { useContext } from "react";
 const TimeTotal = ({ time }) => {
 
     const context = useContext(TimeContext)
-    const timesSum = context.times.reduce((acc, {time}) => {
-        return acc + time
-      }, 0);
-    console.log(context)
-
-    return <div className="time-total">Total: {timesSum} </div>
+    const totalDuration = context.times.reduce((total, entry) => parseInt(entry.time) + total, 0)
+    return <div className="time-total">Total: {totalDuration} hour(s)</div>
 
 }
 
