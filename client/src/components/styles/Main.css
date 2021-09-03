@@ -1,0 +1,10 @@
+.main-page {
+  width: 100%;
+  min-height: 100%;
+}
+
+.main-page > div {
+  float: left;
+  width: 45%;
+  padding: 20px;
+}
